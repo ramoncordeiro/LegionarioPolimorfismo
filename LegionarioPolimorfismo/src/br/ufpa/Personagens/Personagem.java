@@ -39,7 +39,7 @@ Trabalhar com pacotes
 package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
 
-public class Personagem {
+public abstract class Personagem {
 
     int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
