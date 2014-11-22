@@ -47,7 +47,7 @@ public abstract class Personagem {
     Item[] Itens; //Personagem terá 3 armas distintas 1 principal e 2 secundárias.
     private static final int forcaMaxima=100; //cada personagem terá uma força que chegará até 100 pts.
     
-    //Construtor da Classe
+   // --------------------------------------------- CONSTRUTORES -----------------------------------
     //ANALISAR SE POSSO UTILIZAR O SET DENTRO DO CONSTRUTOR
     public Personagem(int id, String nome, int saude, Item[] Itens) {
         setId(id);

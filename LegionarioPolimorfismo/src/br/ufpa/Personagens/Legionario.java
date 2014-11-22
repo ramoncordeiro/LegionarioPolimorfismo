@@ -89,8 +89,8 @@ public class Legionario extends PersonagemMilitar implements Desgaste{
         return getVelocidadeAtaque();
     }
     
-    public boolean  mudarEstado(){
-        estado = true;
+    public boolean  mudarEstado(boolean estado){
+        
         setEstado(estado);
         return estado;
     }
