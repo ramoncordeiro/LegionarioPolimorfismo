@@ -6,9 +6,10 @@ imediata)
 package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
 
+
 //FAZER SOBRESCRITA DO tipoAtaque na CLASSE LEGIONARIO;
 //na documentação da Classe especificar que tipoAtaque refere-se H x H, Distancia, espada, arco.
-public abstract class PersonagemMilitar extends Personagem{
+public abstract class PersonagemMilitar extends Personagem {
    int ataque;
    int defesa;
    int corrida; //define a velocidade de corrida ( pique ) que o personagem consegue atingir.
