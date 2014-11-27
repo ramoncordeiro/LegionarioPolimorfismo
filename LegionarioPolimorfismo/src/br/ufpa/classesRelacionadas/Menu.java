@@ -17,6 +17,10 @@ public enum Menu {
         
     
     }
+    private Menu(){
+        this.opcao = Integer.parseInt(JOptionPane.showInputDialog("Entre a opcao "));
+    }
+    
     //NO MAIN INSERIR o JOptionPane com Instruçoes
     public static void escolherOpcao(Menu opcao){
         if(opcao == Menu.LEGIONARIO){
