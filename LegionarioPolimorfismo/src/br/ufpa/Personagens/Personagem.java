@@ -38,8 +38,9 @@ Trabalhar com pacotes
 */
 package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
+import br.ufpa.Interfaces.Cor;
 
-public abstract class Personagem {
+public abstract class Personagem implements Cor{
 
     int id; //cada personagem terá um identifiador para diferencia-lo de outros da mesma classe.
     static String nome; //nome da classe do personagem,na classe derivada será inserido este atributo.
@@ -180,7 +181,10 @@ public abstract class Personagem {
         if(saude <= 10){
             System.out.println("Saude em estado crítico! Leve o personagem a um lugar seguro para usar Item de cura");
     }
-}
+
+  
+    
+    }
 
     
            

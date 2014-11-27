@@ -7,9 +7,9 @@ Os itens são instrumentos que o personagem utiliza para realizar suas tarefas, 
 
 
 package br.ufpa.classesRelacionadas;
-import br.ufpa.Interfaces.Desgaste;
 
-public class Item implements Desgaste{
+
+public class Item {
     private String item;
     
 //----------------------------------------------Construtor-----------------------------------------------    
@@ -40,11 +40,6 @@ public class Item implements Desgaste{
         this.item = item;
     }
     
-    //Metodo da Classe Interface Desgaste, necessário Implementar
-    @Override
-    public void Desgaste() {
-        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
-    }
-
+  
    
 }

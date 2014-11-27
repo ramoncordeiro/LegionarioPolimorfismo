@@ -7,9 +7,10 @@ package br.ufpa.Personagens;
 import br.ufpa.classesRelacionadas.Item;
 
 
+
 //FAZER SOBRESCRITA DO tipoAtaque na CLASSE LEGIONARIO;
 //na documentação da Classe especificar que tipoAtaque refere-se H x H, Distancia, espada, arco.
-public abstract class PersonagemMilitar extends Personagem {
+public abstract class PersonagemMilitar extends Personagem implements Comparable<PersonagemMilitar>{
    int ataque;
    int defesa;
    int corrida; //define a velocidade de corrida ( pique ) que o personagem consegue atingir.
@@ -105,5 +106,19 @@ public abstract class PersonagemMilitar extends Personagem {
     }
     
     
+    
+    
+   @Override
+   public int compareTo(PersonagemMilitar outro){
+      if(this.saude != outro.saude){
+          return Integer.compare(this.saude,outro.saude);
+      } 
+       if(this.ataque != outro.ataque){
+           return this.ataque - outro.ataque;
+       }
+           return 0;
+      
+   }
+
 
 }//fim classe

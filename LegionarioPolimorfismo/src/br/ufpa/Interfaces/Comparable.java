@@ -2,13 +2,12 @@
 package br.ufpa.Interfaces;
 
 
-public interface Comparable<Arqueiro> {
+public interface Comparable<PersonagemMilitar> {
 
     /**
      *
-     * @param um
      * @param outro
      * @return
      */
-    int compareTo(Arqueiro um, Arqueiro outro);
+    public int compareTo(PersonagemMilitar outro);
 }

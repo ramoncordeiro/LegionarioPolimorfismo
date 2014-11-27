@@ -4,9 +4,10 @@
 package br.ufpa.Personagens;
 import br.ufpa.Interfaces.Desgaste;
 import br.ufpa.classesRelacionadas.Item;
+import br.ufpa.Interfaces.Cor;
 
 
-public class Legionario extends PersonagemMilitar implements Desgaste{
+public class Legionario extends PersonagemMilitar implements Desgaste,Cor{
 
     
     int velocidadeAtaque;
@@ -110,10 +111,25 @@ public class Legionario extends PersonagemMilitar implements Desgaste{
     // Método da Classe Intereface desgaste
     //Necessário Implementar.
     @Override
-    public void Desgaste() {
+    public void Desgaste(int velocidadeAtaque) {
         
+        throw new UnsupportedOperationException("Nao foi realizado desgaste."); //To change body of generated methods, choose Tools | Templates.
+    }
+    
+    public String ToString(){
+        System.out.println("Nome "+getNome()); 
+        System.out.println("Ataque "+getAtaque());
+        System.out.println("Corrida "+getCorrida());
+        System.out.println("Defesa "+getDefesa());
+        System.out.println("Estado "+getEstado());
+       return getNome();
+    }
+
+    @Override
+    public void cor(String cor) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+            
 }// fim classe
 
 
