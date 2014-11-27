@@ -5,9 +5,10 @@ import br.ufpa.Personagens.PersonagemMilitar;
 import br.ufpa.Personagens.Legionario;
 import br.ufpa.classesRelacionadas.Item;
 import br.ufpa.classesRelacionadas.Esquadrao;
+import br.ufpa.classesRelacionadas.Menu;
 
 public class Main {
     public static void main(String[] args) {
-        Esquadrao esq = new Esquadrao();
+        Menu m = new Menu();
     }
 }

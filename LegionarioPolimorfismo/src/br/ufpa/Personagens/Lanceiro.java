@@ -81,6 +81,12 @@ public void usarEspada(Item[] Itens)  {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
-
+public String ToString(){
+        System.out.println("Nome "+getNome()); 
+        System.out.println("Ataque "+getAtaque());
+        System.out.println("Corrida "+getCorrida());
+        System.out.println("Defesa "+getDefesa());
+          return getNome();
+    }
 
 }
