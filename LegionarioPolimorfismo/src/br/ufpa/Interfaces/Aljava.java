@@ -1,13 +1,14 @@
 
 package br.ufpa.Interfaces;
 
-import br.ufpa.classesRelacionadas.Item;
+
+import java.util.ArrayList;
 
 
 public interface Aljava {
 
    
-    public void decrementarAljava(Item[] items);
+    public void decrementarAljava(ArrayList flecha);
         
     
     

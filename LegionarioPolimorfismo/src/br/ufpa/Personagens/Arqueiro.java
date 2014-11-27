@@ -2,17 +2,20 @@
 package br.ufpa.Personagens;
 import br.ufpa.Interfaces.Aljava;
 import br.ufpa.classesRelacionadas.Item;
+import java.util.ArrayList;
 
 
 
 public class Arqueiro extends PersonagemMilitar implements Aljava{
     int distanciaMinima;
-    int flechas;
+    //int flechas;
+    ArrayList<Integer>flecha;
 
+   
 // ---------------------------------------- CONSTRUTORES --------------------------------------------    
     public Arqueiro(int distanciaMinima, int ataque, int defesa, int corrida, int id, String nome, int saude, Item[] Itens) {
         super(ataque, defesa, corrida, id, nome, saude, Itens);
-        this.flechas = 10;
+        
         this.distanciaMinima = distanciaMinima;
     }
 
@@ -29,6 +32,21 @@ public class Arqueiro extends PersonagemMilitar implements Aljava{
     public void setDistanciaMinima(int distanciaMinima) {
         this.distanciaMinima = distanciaMinima;
     }
+    
+    
+     public ArrayList<Integer> getFlecha() {
+        return flecha;
+    }
+
+    public void setFlecha(ArrayList<Integer> flecha) {
+        for (int i = 0; i < 10; i++) {
+            flecha.add(i);
+            //this.flecha.add(i) = flecha.get(i);
+        }
+        this.flecha.addAll(flecha);
+        
+                //this.flecha = flecha;
+    }
   
   // --------------------------------------------------------------------------------------------- 
     
@@ -36,7 +54,7 @@ public class Arqueiro extends PersonagemMilitar implements Aljava{
     
     
     
-    // --------------------------- Implementação da interface Aljava
+    // --------------------------- Implementação da interface Aljava ---------------------------------
     
     @Override
      public void setItens(Item[] Itens) {
@@ -52,7 +70,7 @@ public class Arqueiro extends PersonagemMilitar implements Aljava{
     }
     
     
-    
+    /*
     @Override
     public void decrementarAljava(Item[] items) {
         
@@ -67,7 +85,22 @@ public class Arqueiro extends PersonagemMilitar implements Aljava{
         
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
+    */
     
+    @Override
+    public void decrementarAljava(ArrayList flecha) {
+        
+        for (int i = 0; i < flecha.size(); i++) {
+           if(getItens()[i].getItem().equals("Arco")){
+               flecha.remove(i);
+               System.out.println(" Arqueiro tem atualmente :"+flecha.size());
+               }
+        }
+        
+        
+        
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
     
     
     }
